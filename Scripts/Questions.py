@@ -1,6 +1,5 @@
 import json
 
-Words = "Data/Words.json"
 
 def QuestionLevel(Level):
     if Level == 1:
@@ -17,11 +16,14 @@ def QuestionLevel(Level):
 
 def Question(Level):
     Total = 0
+    Words = "Data/Words.json"
     Show = QuestionLevel(Level)
     with open(Words, "r") as Words:
         Word = json.load(Words)
     
         # Getting the Questions.
+
+        # Level 1
         if Show == str("Questions 1"):
             Q1 = input("What is 'Hello' in Korean? ")
             Q2 = input("What is 'Hi' in Korean? ")

@@ -18,9 +18,11 @@ def Start(Level):
     print("Level ", Level, "\n")
 
     # Show the Questions for the level.
-    Question(Level)
-
-    # Updating The Level.
-    LevelUP(Level)
-    NewLevel = 1 + Level
-    print("User Leveled up\nNew Level ", NewLevel)
+    Q = Question(Level)
+    if Q > 9:
+        # Leveling Up The User.
+        LevelUP(Level)
+        NewLevel = 1 + Level
+        print("User Leveled up\nNew Level ", NewLevel)
+    else:
+        print("\nOpps you didn't get enough right.\nYou didn't level up.")
