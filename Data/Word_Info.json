@@ -1,0 +1,8 @@
+{
+    "Right": {
+        "Hello": "Y"
+    },
+    "Wrong": {
+        "Hello": "N"
+    }
+}
